@@ -31,11 +31,11 @@ const createTodo = function(req, res){
     completed: false,
     createdBy: req.user._id
   })
-  //todo.save().then(function() {
-  //  return res.send(todo)
-  //}).catch(function(error) {
-  //  return res.status(400).send({ error: error })
-  //})
+  todo.save().then(function() {
+    return res.send(todo)
+  }).catch(function(error) {
+    return res.status(400).send({ error: error })
+  })
 }
 
 const updateTodo = function(req, res) {
